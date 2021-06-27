@@ -11,8 +11,8 @@ function App() {
     <div className="app">
       <h2>Pizza Toppings</h2>
       <ul>
-        {toppings.map((topping) => {
-          return <li>{topping}</li>;
+        {toppings.map((topping, index) => {
+          return <li key={index}>{topping}</li>;
         })}
       </ul>
     </div>
