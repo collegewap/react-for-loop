@@ -6,15 +6,23 @@ const toppings = [
   "Onion",
   "Black Olives",
 ];
+
+let listToRender = [];
+
+const generateList = () => {
+  for (let index = 0; index < toppings.length; index++) {
+    const topping = toppings[index];
+    listToRender.push(<li key={index}>{topping}</li>);
+  }
+};
+
+generateList();
+
 function App() {
   return (
     <div className="app">
       <h2>Pizza Toppings</h2>
-      <ul>
-        {toppings.map((topping, index) => (
-          <li key={index}>{topping}</li>
-        ))}
-      </ul>
+      <ul>{listToRender}</ul>
     </div>
   );
 }
